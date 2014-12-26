@@ -7,7 +7,7 @@ MAINTAINER "Michael Bradley" <michael.bradley@nccts.org>
 # Et vidimus gloriam ejus, gloriam quasi unigeniti a Patre plenum gratiæ et veritatis.
 
 # Cache buster
-ENV REFRESHED_AT [2014-12-22 Mon 01:42]
+ENV REFRESHED_AT [2014-12-25 Thu 19:24]
 
 # Set environment variables
 ENV HOME /root
