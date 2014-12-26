@@ -24,10 +24,7 @@ cp /docker-build/support/wrap_service.sh /etc/service/docker/run
 # "sailor" user needs group or sudo privs to interface with the Docker daemon, 
 #   whether in a docker-in-docker scenario (running its own Docker daemon) or
 #   accessing the host's daemon
-usermod -a -G docker sailor
-usermod -a -G sudo sailor
-usermod -a -G users sailor
-echo '%sudo ALL=NOPASSWD: ALL' >> /etc/sudoers
+usermod -a -G docker,users sailor
 
 # Setup docker cli environment for unprivileged user 'sailor'
 sudo -i -u sailor /docker-build/support/user_sailor.sh
