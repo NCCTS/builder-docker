@@ -18,8 +18,8 @@ apt-get -y install lxc-docker
 cp /docker-build/support/wrapdocker.sh /usr/local/bin/wrapdocker
 
 # Install phusion/baseimage service to invoke the Docker daemon wrapper
-mkdir -p /etc/service/docker
-cp /docker-build/support/wrap_service.sh /etc/service/docker/run
+mkdir -p /etc/service/dind
+cp /docker-build/support/wrap_service.sh /etc/service/dind/run
 
 # "sailor" user needs group or sudo privs to interface with the Docker daemon, 
 #   whether in a docker-in-docker scenario (running its own Docker daemon) or
