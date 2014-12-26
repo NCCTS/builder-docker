@@ -26,8 +26,11 @@ cp /docker-build/support/wrap_service.sh /etc/service/docker/run
 #   accessing the host's daemon
 usermod -a -G docker,users sailor
 
+# Setup docker cli environment for root
+/docker-build/support/user_common.sh
+
 # Setup docker cli environment for unprivileged user 'sailor'
-sudo -i -u sailor /docker-build/support/user_sailor.sh
+sudo -i -u sailor /docker-build/support/user_common.sh
 
 # Cleanup
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
