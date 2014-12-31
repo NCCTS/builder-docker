@@ -27,7 +27,10 @@ cp /docker-build/support/wrap_service.sh /etc/service/dind/run
 usermod -a -G docker,users sailor
 
 # Install Fig
-curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`-`uname -m` > /usr/local/bin/fig; chmod +x /usr/local/bin/fig
+fig_base_url=https://github.com/docker/fig/releases/download/1.0.1/fig
+curl -L $fig_base_url-`uname -s`-`uname -m` \
+     > /usr/local/bin/fig
+chmod +x /usr/local/bin/fig
 
 # Setup docker cli environment for root
 /docker-build/support/user_common.sh
