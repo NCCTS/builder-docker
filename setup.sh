@@ -28,7 +28,7 @@ usermod -a -G docker,users sailor
 
 # Install Fig
 fig_base_url=https://github.com/docker/fig/releases/download/1.0.1/fig
-curl -L $fig_base_url-`uname -s`-`uname -m` \
+curl -L $fig_base_url-$(uname -s)-$(uname -m) \
      > /usr/local/bin/fig
 chmod +x /usr/local/bin/fig
 
