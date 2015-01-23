@@ -5,7 +5,10 @@ export HOME=/root
 
 # Install Docker
 apt-get update
-apt-get -y install apt-transport-https ca-certificates lxc iptables
+apt-get -y install apt-transport-https \
+                   ca-certificates \
+                   lxc \
+                   iptables
 echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
 apt-get update
@@ -21,9 +24,9 @@ cp /docker-build/support/wrapdocker.sh /usr/local/bin/wrapdocker
 mkdir -p /etc/service/dind
 cp /docker-build/support/wrap_service.sh /etc/service/dind/run
 
-# "sailor" user needs privs to interface with the Docker daemon, whether in a
-# docker-in-docker scenario (running its own Docker daemon) or accessing the
-# host's daemon
+# User "sailor" needs group-privs to interface with the Docker daemon, whether
+# in a docker-in-docker scenario (running its own Docker daemon) or accessing
+# the host's daemon
 usermod -a -G docker,users sailor
 
 # Install Fig
