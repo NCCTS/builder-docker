@@ -21,9 +21,9 @@ cp /docker-build/support/wrapdocker.sh /usr/local/bin/wrapdocker
 mkdir -p /etc/service/dind
 cp /docker-build/support/wrap_service.sh /etc/service/dind/run
 
-# "sailor" user needs group or sudo privs to interface with the Docker daemon, 
-#   whether in a docker-in-docker scenario (running its own Docker daemon) or
-#   accessing the host's daemon
+# "sailor" user needs privs to interface with the Docker daemon, whether in a
+# docker-in-docker scenario (running its own Docker daemon) or accessing the
+# host's daemon
 usermod -a -G docker,users sailor
 
 # Install Fig
