@@ -2,12 +2,12 @@
 FROM nccts/baseimage:0.0.11
 
 # nccts/builder
-# Version: 0.0.10
+# Version: 0.0.11
 MAINTAINER "Michael Bradley" <michael.bradley@nccts.org>
 # Et vidimus gloriam ejus, gloriam quasi unigeniti a Patre plenum gratiæ et veritatis.
 
 # Cache buster
-ENV REFRESHED_AT [2014-12-25 Thu 19:24]
+ENV REFRESHED_AT [2014-01-22 Thu 23:05]
 
 # Set environment variables
 ENV HOME /root
