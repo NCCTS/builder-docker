@@ -94,12 +94,12 @@ else
         # don't fork, per phusion/baseimage
         # ---------------------------------
 	# docker -d $DOCKER_DAEMON_ARGS &>/var/log/docker.log &
-        docker -d $DOCKER_DAEMON_ARGS &>/var/log/docker.log
+        exec docker -d $DOCKER_DAEMON_ARGS &>/var/log/docker.log
     else
         # don't fork, per phusion/baseimage
         # ---------------------------------
         # docker -d $DOCKER_DAEMON_ARGS &
-	docker -d $DOCKER_DAEMON_ARGS
+	exec docker -d $DOCKER_DAEMON_ARGS
     fi
     # won't fork, no sense in invoking bash
     # exec bash
