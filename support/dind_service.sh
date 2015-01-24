@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ "${DIND+set}" = set ]; then
     mkdir -p /var/docker_host/run
