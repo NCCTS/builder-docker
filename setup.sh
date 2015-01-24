@@ -18,11 +18,11 @@ apt-get -y install lxc-docker
 #   From: https://github.com/jpetazzo/dind
 #   Apache License Version 2.0
 #   https://github.com/jpetazzo/dind/blob/master/LICENSE
-cp /docker-build/support/wrapdocker.sh /usr/local/bin/wrapdocker
+cp /docker-build/support/dind.sh /usr/local/bin/dind
 
 # Install phusion/baseimage service to invoke the Docker daemon wrapper
 mkdir -p /etc/service/dind
-cp /docker-build/support/wrap_service.sh /etc/service/dind/run
+cp /docker-build/support/dind_service.sh /etc/service/dind/run
 
 # User "sailor" needs group-privs to interface with the Docker daemon, whether
 # in a docker-in-docker scenario (running its own Docker daemon) or accessing
