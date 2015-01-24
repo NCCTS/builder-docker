@@ -31,5 +31,3 @@ CMD [""]
 # example usage
 # --------------------------------------------------
 # docker run -it --rm nccts/builder
-#
-# need more examples...
